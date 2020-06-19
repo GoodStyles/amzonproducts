@@ -4,7 +4,7 @@
   "description": "\"Ecommerce Website\"",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "author": "Gowtham",
   "license": "ISC",
