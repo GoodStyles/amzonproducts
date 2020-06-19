@@ -6,7 +6,7 @@ const showAlert = (type, msg) => {
   hideAlert();
   const markUp = `<div class="alert alert--${type}">${msg}</div>`;
   document.querySelector("body").insertAdjacentHTML("afterbegin", markUp);
-  window.setTimeout(hideAlert, 2000);
+  window.setTimeout(hideAlert, 1000);
 };
 
 
@@ -14,7 +14,7 @@ const addProduct = async (product, productBy, productName, price, imageCover, ra
   try {
     const res = await axios({
       method: "POST",
-      url: `https://goodstyles.herokuapp.com/addproducts/${product}`,
+      url: `https://goodstyles.herokuapp.com/addProduct/${product}`,
       data: { 
         productBy, 
         productName,
@@ -54,4 +54,3 @@ if (addProductForm) {
     addProduct(product, productBy, productName, price, imageCover, ratings, ratingsQuantity, link);
   });
 }
-
