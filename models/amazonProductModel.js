@@ -56,3 +56,4 @@ exports.jeanTops = mongoose.model("JeanTops", amazonProductSchema);
 exports.sandals = mongoose.model("sandals", amazonProductSchema);
 exports.earrings = mongoose.model("earrings", amazonProductSchema);
 exports.formals = mongoose.model("formals", amazonProductSchema);
+exports.collegebags = mongoose.model("collegebags", amazonProductSchema);
