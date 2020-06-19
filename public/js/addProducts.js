@@ -14,7 +14,7 @@ const addProduct = async (product, productBy, productName, price, imageCover, ra
   try {
     const res = await axios({
       method: "POST",
-      url: `http://goodstyles.herokuapp.com/addproducts/${product}`,
+      url: `https://goodstyles.herokuapp.com/addproducts/${product}`,
       data: { 
         productBy, 
         productName,
