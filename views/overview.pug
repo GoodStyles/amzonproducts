@@ -1,0 +1,24 @@
+extends base
+block content    
+    main.main
+        .card-container
+            include _APIFeatures
+            each product in products 
+                .card
+                    .card__header
+                        .card__picture
+                            .card__picture-overlay &nbsp;
+                            img.card__picture-img(src=`/img/amazon/${product.imageCover}`, alt='Tour 1')
+                        h3.heading-tertirary
+                            span= product.productBy
+                    .card__details
+                        h4.card__sub-heading= product.productName
+                    .card__footer
+                        p
+                            span.card__footer-value(style="padding:1.2rem; margin:auto;")= `₹ ${product.price}`
+                                img.card__icon(src="/img/icons/tags.png", alt="cash logo" style="height: 3rem;width: 3rem;float: left;")
+                        p.card__ratings
+                            span.card__footer-value(style="padding:1.2rem; margin:auto;")= product.ratings
+                            span.card__footer-text= ` rating (${product.ratingsQuantity})`
+                                img.card__icon(src="/img/icons/star.png", alt="cash logo" style="height: 3rem;width: 3rem;float: left;")
+                        a.btn.btn--green.btn--small(href=`${product.link}`) Details

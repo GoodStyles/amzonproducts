@@ -1,0 +1,47 @@
+extends base
+
+block content
+
+  main.main
+    .addproduct-form
+      h2.heading-secondary.ma-bt-lg ADD PRODUCTS
+      br
+      form.form.form--addProduct(autocomplete="off", method='post')
+        label(for="sel1" style="font-size: 1.6rem; font-weight: 700; margin-bottom: 0.75rem;") SELECT PRODUCT NAME:
+        |&nbsp;&nbsp;&nbsp;
+        select.form-control(id="sel1" style="font-size: 1.3rem;")
+          each model, val in models
+            option(id="val")=`${val}`
+        br
+        .row.row-space
+          .col
+            .form__group
+              label.form__label(for='text') Product By
+              input.form__input(type='text',id="productBy", placeholder='AXEN', required)
+          .col
+            .form__group
+              label.form__label(for='text') Product Name
+              input.form__input(type='text',id="productName", placeholder='AXEN-NAME', required)
+        .row.row-space
+          .col
+            .form__group
+              label.form__label(for='text') Price
+              input.form__input(type='text',id="price",placeholder='₹ 235', required)  
+          .col
+            .form__group
+              label.form__label(for='text') ImageCover
+              input.form__input(type='text',id="imageCover",placeholder='IMAGE COVER.jpg', required)
+        .row.row-space
+          .col
+            .form__group
+              label.form__label(for='text') Ratings
+              input.form__input(type='number', step="0.01", id="ratings",placeholder='4.5', required)
+          .col
+            .form__group
+              label.form__label(for='text') RatingsQuantity
+              input.form__input(type='number',id="ratingsQuantity",placeholder='1,222', required)
+        .form__group
+          label.form__label(for='text') Link
+          input.form__input(type='text',id="link",placeholder='https://amzn.to/2BgZUAk', required)  
+        .form__group
+          button.btn.btn--green(style="width: 10rem; font-size: 1rem;", id="upload") Upload

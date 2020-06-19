@@ -1,0 +1,30 @@
+[
+  {
+    "category": "Men Clothing",
+    "categoryIcon": "shirt.png",
+    "catrgoryDescription": "Latest trends with amazing discounts we provide the best products",
+    "types": ["Formal Shirts"],
+    "links": ["formals"]
+  },
+  {
+    "category": "Women Clothing",
+    "categoryIcon": "icons8-wedding-dress-48.png",
+    "catrgoryDescription": "Latest trends with amazing discounts we provide the best products",
+    "types": ["Kurthies", "Jean Tops"],
+    "links": ["kurthies", "jeanTops"]
+  },
+  {
+    "category": "Women FootWear",
+    "categoryIcon": "chappal.png",
+    "catrgoryDescription": "Latest trends with amazing discounts we provide the best products",
+    "types": ["Sandals & Shoes"],
+    "links": ["sandals"]
+  },
+  {
+    "category": "Women Jewllary",
+    "categoryIcon": "ring.png",
+    "catrgoryDescription": "Latest trends with amazing discounts we provide the best products",
+    "types": ["Earrings"],
+    "links": ["earrings"]
+  }
+]

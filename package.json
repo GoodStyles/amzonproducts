@@ -1,0 +1,26 @@
+{
+  "name": "goodstyles",
+  "version": "1.0.0",
+  "description": "\"Ecommerce Website\"",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Gowtham",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.10.1",
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.19",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7",
+    "prettier": "^2.0.5",
+    "pug": "^3.0.0",
+    "slugify": "^1.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
