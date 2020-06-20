@@ -10,20 +10,12 @@ const showAlert = (type, msg) => {
 };
 
 
-const addProduct = async (product, productBy, productName, price, imageCover, ratings, ratingsQuantity, link) => {
+const addProduct = async (product, data) => {
   try {
     const res = await axios({
       method: "POST",
       url: `https://goodstyles.herokuapp.com/addProduct/${product}`,
-      data: { 
-        productBy, 
-        productName,
-        price, 
-        imageCover, 
-        ratings, 
-        ratingsQuantity, 
-        link
-      },
+      data,
     });
     console.log(res)
     if (res.data.status === "Success") {
@@ -44,13 +36,15 @@ if (addProductForm) {
   addProductForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const product = document.getElementById("sel1").value;
-    const productBy = document.getElementById("productBy").value;
-    const productName = document.getElementById("productName").value;
-    const price = document.getElementById("price").value;
-    const imageCover = document.getElementById("imageCover").value;
-    const ratings = document.getElementById("ratings").value;
-    const ratingsQuantity = document.getElementById("ratingsQuantity").value;
-    const link = document.getElementById("link").value;
-    addProduct(product, productBy, productName, price, imageCover, ratings, ratingsQuantity, link);
+    const form = new FormData()
+
+    form.append("productBy", document.getElementById("productBy").value);
+    form.append("productName", document.getElementById("productName").value);
+    form.append("price", document.getElementById("price").value);
+    form.append("imageCover", document.getElementById("imageCover").files[0]);
+    form.append("ratings", document.getElementById("ratings").value);
+    form.append("ratingsQuantity", document.getElementById("ratingsQuantity").value);
+    form.append("link", document.getElementById("link").value);
+    addProduct(product, form, 'data');
   });
 }

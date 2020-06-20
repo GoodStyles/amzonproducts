@@ -30,7 +30,8 @@ block content
           .col
             .form__group
               label.form__label(for='text') ImageCover
-              input.form__input(type='text',id="imageCover",placeholder='IMAGE COVER.jpg', required)
+              input.form__upload(type='file',id="imageCover", accept='image/*', name='imageCover', required)
+              label(for = "imageCover") Choose Image 
         .row.row-space
           .col
             .form__group

@@ -18,7 +18,7 @@ const amazonProductSchema = new mongoose.Schema({
   },
   imageCover: {
     type: String,
-    required: true,
+    default: 'default.jpg'
   },
   style: {
     type: String,
